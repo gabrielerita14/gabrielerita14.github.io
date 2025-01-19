@@ -1,52 +1,97 @@
-import 'package:flutter/material.dart';
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #0078d7;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1rem;
+        }
+        .main {
+            flex: 3;
+            background: white;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #0078d7;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Página Web</h1>
+        <p>Este es un diseño básico para comenzar.</p>
+    </header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <div class="main">
+            <h2>Sección Principal</h2>
+            <p>Este es el contenido principal de la página. Aquí puedes agregar texto, imágenes, videos o cualquier otro elemento.</p>
+        </div>
+        <div class="sidebar">
+            <h3>Barra Lateral</h3>
+            <p>Usa esta sección para mostrar enlaces, noticias o cualquier información secundaria.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Layout Responsivo',
-      home: ResponsiveLayout(),
-    );
-  }
-}
-
-class ResponsiveLayout extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Meu Layout Responsivo'),
-      ),
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          if (constraints.maxWidth < 600) {
-            // Layout para telas pequenas
-            return ListView(
-              children: [
-                Container(color: Colors.blue, height: 100),
-                Container(color: Colors.green, height: 100),
-                Container(color: Colors.orange, height: 100),
-              ],
-            );
-          } else {
-            // Layout para telas grandes
-            return GridView.count(
-              crossAxisCount: 3,
-              children: [
-                Container(color: Colors.blue),
-                Container(color: Colors.green),
-                Container(color: Colors.orange),
-              ],
-            );
-          }
-        },
-      ),
-    );
-  }
-}
