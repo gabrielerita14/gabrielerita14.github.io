@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout de Página Web</title>
+    <title>Curso Talento Tech Paraná</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #0078D7;
             color: white;
+            padding: 1rem;
             text-align: center;
-            padding: 1rem 0;
         }
         nav {
             background: #333;
-            display: flex;
-            justify-content: center;
+            color: white;
+            text-align: center;
             padding: 0.5rem 0;
         }
         nav a {
@@ -37,59 +35,55 @@
             text-decoration: underline;
         }
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 1rem auto;
-            max-width: 1200px;
-        }
-        .main {
-            flex: 3;
-            background: #f9f9f9;
+            max-width: 800px;
+            margin: 2rem auto;
             padding: 1rem;
-            margin: 1rem;
+            background: white;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .sidebar {
-            flex: 1;
-            background: #ddd;
-            padding: 1rem;
-            margin: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        h1, h2 {
+            color: #0078D7;
         }
         footer {
-            background: #4CAF50;
-            color: white;
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 1rem;
+            padding: 1rem;
+            background: #0078D7;
+            color: white;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bem-vindo à Minha Página</h1>
-        <p>Este é um layout simples de uma página web.</p>
+        <h1>Curso Talento Tech Paraná</h1>
+        <p>Desenvolvendo talentos para o futuro da tecnologia!</p>
     </header>
     <nav>
-        <a href="#inicio">Início</a>
         <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
+        <a href="#beneficios">Benefícios</a>
         <a href="#contato">Contato</a>
     </nav>
     <div class="container">
-        <div class="main">
-            <h2>Conteúdo Principal</h2>
-            <p>Esta área contém o conteúdo principal da sua página. Adicione texto, imagens ou outros elementos para personalizá-la.</p>
-        </div>
-        <div class="sidebar">
-            <h3>Barra Lateral</h3>
-            <p>Use esta seção para informações adicionais, links ou outros recursos complementares.</p>
-        </div>
+        <section id="sobre">
+            <h2>Sobre o Curso</h2>
+            <p>O <strong>Curso Talento Tech Paraná</strong> é uma iniciativa que busca capacitar profissionais em áreas de tecnologia, oferecendo conteúdos atualizados e conectados às demandas do mercado de trabalho.</p>
+        </section>
+        <section id="beneficios">
+            <h2>Benefícios</h2>
+            <ul>
+                <li>Capacitação gratuita em tecnologia.</li>
+                <li>Conexão com empresas e oportunidades de emprego.</li>
+                <li>Aprendizado prático e dinâmico.</li>
+            </ul>
+        </section>
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Quer saber mais? Envie um e-mail para <a href="mailto:contato@talentotechparana.com">contato@talentotechparana.com</a>.</p>
+        </section>
     </div>
     <footer>
-        <p>&copy; 2025 Minha Página. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Curso Talento Tech Paraná. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
